@@ -20,7 +20,7 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # Use unicorn as the web server
 # gem 'unicorn'
