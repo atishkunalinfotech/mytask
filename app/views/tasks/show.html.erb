@@ -1,0 +1,20 @@
+<p>
+  <b>mytask:</b>
+  <%= @task.mytask%>
+</p>
+
+<div>
+  <b>Created on:</b>
+  <%= @task.created_date%></a>
+</div>
+
+
+<p>
+  <b>status:</b>
+  <%= @task.status %>
+</p>
+
+
+<%#= link_to 'Edit', edit_task_path(@task) %> 
+<%= link_to 'Back', tasks_path %> | <li><a href="/tasks/<%= @task.id %>/delete" onclick="if(confirm('Are you sure you want to delete this page?'))  return true;  else  return false;" >Destroy</a></li> 
+

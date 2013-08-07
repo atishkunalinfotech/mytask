@@ -1,11 +1,19 @@
 Mytask::Application.routes.draw do
   
-  get "log_in" => "sessions#new", :as => "log_in"
-  get "log_out" => "sessions#destroy", :as => "log_out"
+  
+  get "signin" => "sessions#new", :as => "signin"
+  get "signout" => "sessions#destroy", :as => "signout"
   get "sign_up" => "users#new", :as => "sign_up"
   root :to => "sessions#new"
   resources :users
   resources :sessions
+  resources :tasks do
+    post "status", :on=>:collection
+  end
+  match '/tasks/:id/delete' => "tasks#destroy"
+  
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

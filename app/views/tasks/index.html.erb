@@ -1,0 +1,23 @@
+
+  <%= javascript_include_tag "prototype" %>
+
+<h1>My Tasks</h1>
+ <%= select :task, :id,  Task.find(:all).collect {|p| [ p.status, p.status ] }, {:prompt => 'Select'}, :onchange => "#{remote_function(:url => {:controller =>"tasks", :action => "status"}, :with => "'status='+value",:loading => "Element.show('loader');",:complete => "Element.hide('loader');")}" %>
+ 
+
+<br>
+<br><br>
+
+ <div id ="status">
+  
+
+ </div>
+
+ <% for task in @tasks %>
+ <li><a href ="/tasks/<%= task.id %>"><%= task.mytask %></a></li>
+ <li><%= link_to 'Edit', edit_task_path(task) %></li>
+ <% end %>
+<br>
+<br><br>
+
+<%= link_to 'New task', new_task_path %>

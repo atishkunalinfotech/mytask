@@ -18,6 +18,9 @@ end
 
 gem 'jquery-rails'
 gem 'rspec-rails'
+gem 'prototype-rails'
+gem 'shoulda'
+
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', :require => 'bcrypt'
