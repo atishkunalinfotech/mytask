@@ -28,7 +28,7 @@ class TasksController < ApplicationController
   	if @task.save
   		redirect_to tasks_path
     else
-      redirect_to root_url
+      render 'new'
     end
   end
 

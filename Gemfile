@@ -21,6 +21,8 @@ gem 'rspec-rails'
 gem 'prototype-rails'
 gem 'shoulda'
 gem 'faker'
+gem 'autotest'
+
 
 
 # To use ActiveModel has_secure_password
@@ -40,5 +42,6 @@ group :test do
   gem 'turn', '0.8.2', :require => false
   gem 'rspec'
   gem 'nokogiri'
-  gem 'webrat' 
+  gem 'webrat'
+  gem 'factory_girl_rails' 
 end
