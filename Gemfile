@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'prototype-rails'
 gem 'shoulda'
+gem 'faker'
 
 
 # To use ActiveModel has_secure_password
@@ -38,4 +39,6 @@ group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
   gem 'rspec'
+  gem 'nokogiri'
+  gem 'webrat' 
 end

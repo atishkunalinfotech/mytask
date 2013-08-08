@@ -13,6 +13,12 @@ class TasksController < ApplicationController
   	@task = Task.find(params[:id])
   end
 
+  def status
+    #raise "#{params[:status]}"
+   @tasks =  Task.find_all_by_status_and_user_id(params[:status], current_user.id)
+   # render(:update) { |page| page.replace_html 'status', :partial => 'task_by_status' }
+  end
+
   def edit
   	@task = Task.find(params[:id])
   end

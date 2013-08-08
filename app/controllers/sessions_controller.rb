@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
   def new
+    @title = "Sign in"
   end
 
   def create
+
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
